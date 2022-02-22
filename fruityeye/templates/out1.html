@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Prediction
+{% endblock %}
+
+{% block content %}
+
+<div>
+  <h1 style="margin-left: 10px;">Your Selected Image</h1>
+  <br><br>
+  <img src=" {{url_for('rot_fresh_img', filename=image_name)}}" style="width:300px;height:300px; margin-left: 20px;">
+  <br>
+  <p style="font-weight: 700; margin-left: 120px; color: rgb(190, 84, 9);"> {{text}} </p>
+  <br>
+  <a style="margin-left: 20px; text-decoration: none; color: azure; background-color: rgb(52, 123, 182); padding: 5px;" href="/rotten" role="button">Predict Another image</a>
+</div>
+
+{% endblock %}

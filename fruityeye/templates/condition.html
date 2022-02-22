@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Rotten or Fresh
+{% endblock %}
+
+
+{% block content %}
+
+<script>
+    $("#file-picker").change(function(){
+        var input = document.getElementById('file-picker');
+        for (var i=0; i<input.files.length; i++)
+        {
+            var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+            if ((ext == 'jpg') || (ext == 'png'))
+            {
+                $("#msg").text("Files are supported")
+            }
+            else
+            {
+                $("#msg").text("Files are NOT supported")
+                document.getElementById("file-picker").value ="";
+            }
+        }
+    } );
+</script>
+
+</head>
+
+<form id="upload-form" action="{{ url_for('rot_image') }}" method="POST" enctype="multipart/form-data">
+  <div>
+    <h1>Upload File from below</h1>
+    <strong>Select file</strong>
+    <input style="margin-left: 20px;" type="file" name="file" accept="image/*" multiple>
+    <br>
+    <input style="margin-top: 20px;" type="submit" value="Prediction">
+  </div>
+</form>
+
+{% endblock %}
