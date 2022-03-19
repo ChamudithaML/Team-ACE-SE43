@@ -5,5 +5,35 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Login page to be edited</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card my-5">
+                <form class="card-body bg-light p-lg-5">
+                    <div class="text-center">
+                        <svg class="img-fluid img-thumbnail rounded-circle my-3"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="200px">
+                            <path
+                                    d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z" />
+                        </svg>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="Username" placeholder="User Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="password" placeholder="password">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary px-5 mb-5 w-50">Login</button>
+                    </div>
+                    <div id="" class="form-text text-center mb-5 text-dark">
+                        Not Registered? <a href="#" class="text-dark fw-bold"> Create an Account</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 {% endblock %}

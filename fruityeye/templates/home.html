@@ -1,9 +1,221 @@
 {% extends 'base.html' %}
-
 {% block title %}
-    Home
+Home
 {% endblock %}
 
 {% block content %}
-    <h1>Home Page to be edited</h1>
+<div class="wrapper">
+    <section class="hero">
+        <div class="px-4 py-5 text-center d-flex justify-content-center align-items-center"
+             style="background: url('../static/hero image.jpg') no-repeat bottom center / cover;
+            height: 70vh;">
+            <div class="col-lg-6 mx-auto">
+                <h1 class="display-5 fw-bold text-black">FruityEye</h1>
+                <p class="lead mb-4 font-weight-bold text-white bg-dark">We makes difference here</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <!--                    <button class="btn btn-primary btn-lg px-4 gap-3" type="button">Primary button</button>-->
+                    <a class="btn btn-primary btn-lg px-5 gap-3" href="{{ url_for('condition') }}">Get Start</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-about pt-5 pb-5" id="sec-about">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-10 col-lg-8">
+                    <h1 class="h4">About us</h1>
+                    <p class="mt-4 mb-4">FruityEye is an application for the blind to classify fresh fruits and stale
+                        fruits when they go to the supermarket or while they are at home will be a value in many areas
+                        and they are free to select their own fruit items by their own without the help of anyone. here
+                        when a blind person makes the use of this by the feature of capturing photos, so he can operate
+                        it by uploading it and it identifies the fruit and it tells whether it is a fresh fruit or a
+                        stale fruit of in each relevant fruit type. FruityEye helps in identifying specific item in a
+                        shop what user wants once the customer reaches the item located area.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sec-team pb-3" id="sec-team">
+        <div class="container">
+            <h1 class="h4 mb-5 text-center">Our Team</h1>
+
+            <div class="row">
+                <!--                <div class="col-md-3">-->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
+                    <div class="card" style="height: 380px;">
+                        <img alt="..." class="card-img-top" src="../static/teamImages/lilan.jpg"
+                             style="height: 240px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: M. Lilan Chamuditha (Team Leader)</h5>
+                            <h6 class="card-title">IIT No: 2019660</h6>
+                            <h6 class="card-title">UoW Id: w1809779</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
+                    <div class="card" style="height: 380px;">
+                        <img alt="..." class="card-img-top" src="../static/teamImages/dasith1.jpg"
+                             style="height: 240px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: D.C. Gamage</h5>
+                            <h6 class="card-title">IIT No: 20200316</h6>
+                            <h6 class="card-title">UoW Id: w1809977</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
+                    <div class="card" style="height: 380px;">
+                        <img alt="..." class="card-img-top" src="../static/teamImages/vikram.jpg"
+                             style="height: 240px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: R. Vikram</h5>
+                            <h6 class="card-title">IIT No: 2019248</h6>
+                            <h6 class="card-title">UoW Id: w1809779</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
+                    <div class="card" style="height: 380px;">
+                        <img alt="..." class="card-img-top" src="../static/teamImages/dhamith.jpg"
+                             style="height: 240px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: N.D. Fernando</h5>
+                            <h6 class="card-title">IIT No: 2019708</h6>
+                            <h6 class="card-title">UoW Id: w1809812</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-features pt-5 pb-5 mt-2" id="sec-features">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3 class="h4">Classification Fruits</h3>
+
+                    <hr/>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eveniet quos temporibus at
+                        rerum qui et quidem, fuga animi illo consectetur vitae expedita architecto sunt similique
+                        ducimus a ex autem?</p>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <img alt="..."
+                         height="190"
+                         width="190"
+                         src="../static/featureImages/camera1.png" width="150">
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <img alt="..."
+                         height="190"
+                         width="190"
+                         src="../static/featureImages/fresh1.png" width="150">
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="h4">Classification Fruit Condition (Rotten or Fresh)</h3>
+
+                    <hr/>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a dolor libero sequi
+                        voluptates et numquam nulla eos. Adipisci distinctio culpa dolores quae repellat dolore
+                        nesciunt, repellendus fugiat delectus. Consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3 class="h4">Classify in Real time camera</h3>
+
+                    <hr/>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, dolorem doloremque.
+                        Voluptatum voluptas consectetur laboriosam sequi dicta sint, amet ea impedit quibusdam vel
+                        molestiae tempore facere repellendus, mollitia cupiditate hic.</p>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <img alt="..."
+                         height="190"
+                         width="190"
+                         src="../static/featureImages/classification2.png" width="150">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-contact pt-5 pb-5" id="sec-contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-7">
+                    <h1 class="h4">Have a question? Get in touch with us!</h1>
+
+                    <form action="" method="">
+                        <div class="col-md mt-3 mb-3">
+                            <div class="form-floating">
+                                <input class="form-control" id="floatingInputGrid" placeholder="your name"
+                                       type="text">
+                                <label for="floatingInputGrid">Your Name:</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md mt-2 mb-3">
+                            <div class="form-floating">
+                                <input class="form-control" id="floatingInputGrid2" placeholder="name@example.com"
+                                       type="email">
+                                <label for="floatingInputGrid">Email address</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md mt-2 mb-3">
+                            <div class="form-floating ">
+                                    <textarea class="form-control" id="floatingTextarea2"
+                                              placeholder="Leave a comment here" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Comments</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center m-3">
+                            <button class="btn btn-primary" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="list-inline mb-0 text-center">
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-twitter"></span></a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-google-plus"></span></a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-instagram"></span></a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a href=""><span class="fa fa-envelope-o"></span></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
 {% endblock %}
