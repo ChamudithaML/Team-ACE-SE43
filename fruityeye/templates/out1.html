@@ -1,19 +1,28 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Prediction
+Prediction
 {% endblock %}
 
 {% block content %}
 
-<div>
-  <h1 style="margin-left: 10px;">Your Selected Image</h1>
-  <br><br>
-  <img src=" {{url_for('rot_fresh_img', filename=image_name)}}" style="width:300px;height:300px; margin-left: 20px;">
-  <br>
-  <p style="font-weight: 700; margin-left: 120px; color: rgb(190, 84, 9);"> {{text}} </p>
-  <br>
-  <a style="margin-left: 20px; text-decoration: none; color: azure; background-color: rgb(52, 123, 182); padding: 5px;" href="/rotten" role="button">Predict Another image</a>
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="text-center">
+            <h1 class="display-4">Your Selected Image</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 ld-grid gap-2 d-flex flex-column justify-content-center align-items-center">
+            <img src=" {{url_for('rot_fresh_img', filename=image_name)}}" style="width:300px;height:300px;">
+            <p class="text-center text-danger fw-bold"> {{text}} </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 ld-grid d-flex flex-column justify-content-center align-items-center">
+            <a class="btn btn-primary btn-lg px-5 gap-3" href="/rotten" role="button">Predict Another image</a>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
