@@ -8,19 +8,6 @@ Rotten or Fresh
 {% block content %}
 
 <script>
-    /*$("#file-picker").change(function () {
-        var input = document.getElementById('file-picker');
-        for (var i = 0; i < input.files.length; i++) {
-            var ext = input.files[i].name.substring(input.files[i].name.lastIndexOf('.') + 1).toLowerCase()
-            if ((ext == 'jpg') || (ext == 'png')) {
-                $("#msg").text("Files are supported")
-            } else {
-                $("#msg").text("Files are NOT supported")
-                document.getElementById("file-picker").value = "";
-            }
-        }
-    });*/
-
     function readURL(input) {
         for (var i = 0; i < input.files.length; i++) {
             var ext = input.files[i].name.substring(input.files[i].name.lastIndexOf('.') + 1).toLowerCase()
@@ -44,16 +31,6 @@ Rotten or Fresh
 
 </head>
 
-<!--<form id="upload-form" action="{{ url_for('rot_image') }}" method="POST" enctype="multipart/form-data">
-  <div>
-    <h1>Upload File from below</h1>
-    <strong>Select file</strong>
-    <input style="margin-left: 20px;" type="file" name="file" accept="image/*" multiple>
-    <br>
-    <input style="margin-top: 20px;" type="submit" value="Prediction">
-  </div>
-</form>-->
-
 <div class="container-fluid py-5">
     <div class="row py-4">
         <div class="text-center">
@@ -69,8 +46,9 @@ Rotten or Fresh
     <div class="row mx-auto">
         <form action="{{ url_for('rot_image') }}" enctype="multipart/form-data" id="upload-form" method="POST">
             <div class="col-6 input-group mb-3 px-2 py-2 rounded-pill bg-light shadow-sm">
-                <input class="form-control border-0" id="upload" onchange="readURL(this);"
-                       type="file">
+                <!-- <input style="margin-left: 20px;" type="file" name="file" accept="image/*" multiple> -->
+                <input class="form-control border-0" id="upload" onchange="readURL(this);" type="file" name="file" accept="image/*">
+
                 <label class="font-weight-light text-muted" for="upload" id="uploadLabel">Choose file</label>
                 <div class="input-group-append">
                     <label class="btn btn-light m-0 rounded-pill px-4" for="upload">
