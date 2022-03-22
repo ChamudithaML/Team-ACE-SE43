@@ -56,3 +56,8 @@ def rot_fresh_img(filename):
 @app.route('/login')
 def login_page():
     return render_template('login.html')
+
+# route to image gallery page
+@app.route('/imageGallery')
+def imageGallery_page():
+    return render_template('imageGallery.html')
