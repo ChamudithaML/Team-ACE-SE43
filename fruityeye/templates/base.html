@@ -35,12 +35,25 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ url_for('home_page') }}" id="btnHome">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('home_page') }}#sec-about">About</a>
+                            <a class="nav-link" href="{{ url_for('condition') }}">Rotten Classifier</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('fruit_cls') }}#sec-contact">Fruit Classification</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('real_time_condition') }}#sec-contact">Real Time</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('imageGallery_page') }}#sec-contact">Image Gallery</a>
                         </li>
 
                         <li class="nav-item">
@@ -48,15 +61,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('condition') }}">Rotten Classifier</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('home_page') }}#sec-contact">Contact</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('imageGallery_page') }}#sec-contact">Image Gallery</a>
+                            <a class="nav-link" href="{{ url_for('home_page') }}#sec-about">About</a>
                         </li>
 
                     </ul>
